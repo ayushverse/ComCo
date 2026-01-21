@@ -6,7 +6,7 @@ function App() {
     const wsRef = useRef<WebSocket | null>(null);
 
     useEffect(() => {
-        const ws = new WebSocket("ws://localhost:8080/ws"); // connect to server
+        const ws = new WebSocket("ws://localhost:8080/ws"); // connect to websocket server
 
         ws.onmessage = (event) => {
             const data = JSON.parse(event.data);
