@@ -11,7 +11,7 @@ let userCount = 0;
 let clientStorage: Client[] = [];
 
 wss.on("connection", (socket) => {
-    userCount++;
+    userCount++; //user count increases as user join
     console.log(`user #${userCount} connected`);
 
     socket.on("message", (message) => {
